@@ -6,7 +6,7 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 
 public class Day17_OpenSourceLogIn {
-//    Create a test case to login the https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+//    Create a test case to logIn the https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 //    using page object model
 
     /*
@@ -22,12 +22,16 @@ public class Day17_OpenSourceLogIn {
 
     @Test
     public void logIn(){
-        OpenSourcePage openSourcePage = new OpenSourcePage();  // create the object from the page to have access to the elements located there already
         Driver.getDriver().get(ConfigReader.getProperty("open_source_URL"));  // get the URL from the ConfigReader
 
-        openSourcePage.userName.sendKeys("Admin");
-        openSourcePage.password.sendKeys("admin123");
+        OpenSourcePage openSourcePage = new OpenSourcePage();  // create the object from the page to have access to the elements located there already
+
+        openSourcePage.userName.sendKeys(ConfigReader.getProperty("open_source_admin_userName"));
+        openSourcePage.password.sendKeys(ConfigReader.getProperty("open_source_admin_password"));
         openSourcePage.submitButton.click();
+
+        // close the driver
+        Driver.closeDriver();
 
     }
 }

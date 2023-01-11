@@ -7,7 +7,7 @@ public class ConfigReader {
     //This class reads the configuration.properties file
     //Create Properties instance
     private static Properties properties;
-    static {
+    static {       // static block works first whenever the class loads
         //path of the configuration file
         String path="configuration.properties";
         try {
@@ -55,4 +55,3 @@ In POM, we create Properties File
 > Keeps Test classes clean
 > Static block is used in ConfigReader class to instantiate Properties file
  */
-// static block works first whenever the class loads

@@ -33,8 +33,11 @@ Answer: In my Driver Class. Our Driver is static, so it can be shared across the
 In POM, we create Properties File
 
 > Properties is a file with .properties extension
-> It holds the test data: url, username, password, browser etc.
-   e.g. instead of Driver.getDriver().get("https://www.techproeducation.com"); we use driver.get(url) in test classes
+> It holds the test data: url, username, password, browser etc. even the invalid that can be used in the tests
+   e.g. instead of Driver.getDriver().get("https://www.techproeducation.com"); again and again in each test class,
+    we, store url=https://www.techproeducation.com in properties file, then we just use driver.get(url) in test classes.
+
+> Create a File on project level >New>File>configuration.properties
 > WE basically define key and value pairs in config file and call them in the test classes
 > used to STORE IMPORTANT DATA
    e.g.
@@ -44,14 +47,20 @@ In POM, we create Properties File
          > password = pass
          > name = Ali
 
-   Used by not only for testers but also for developers.
+   Used not only by testers but also by developers.
    We use JAVA to read this file.
 > This file makes the CODE dynamic (e.g we need to change,  just change config url)
 > Keeps Test classes clean
 > Static block is used to instantiate Properties file
+> We create a ConfigReader class to read the DATA from files (key=value structure)
 
 
+In POM, Page classes are created to locate and save webElements for once and make the
+reusable to be used in the test classes.
 
+
+Benefits of POM:
+> Easy to debug
  */
 
 }

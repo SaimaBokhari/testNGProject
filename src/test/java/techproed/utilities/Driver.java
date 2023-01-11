@@ -36,7 +36,8 @@ public class Driver {
                     break;
 
             }
-            //            driver = WebDriverManager.chromedriver().create();  // This is the latest version (Selenium 4.5)
+            // Following is the latest version (Selenium 4.5)
+            //  driver = WebDriverManager.chromedriver().create();  It also closes the driver automatically.
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // implicit wait will wait for this long only if needed
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
@@ -48,7 +49,7 @@ public class Driver {
     public static void closeDriver(){
         if (driver!=null){  // if driver is already being instantiated / created and is in use, then quit
             driver.quit();
-            driver=null; // make the driver null so when we call getDriver(), we can open the driver again.
+            driver=null; // make the driver null so when we call getDriver(), our if condition stays true, and we can open the driver again.
         }
     }
 

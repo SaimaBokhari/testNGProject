@@ -19,13 +19,16 @@ public class HW01 {
         TestCentrePage testCentrePage = new TestCentrePage();  // create the object from the page to have access to the elements located there already
         Driver.getDriver().get(ConfigReader.getProperty("testcentre_URL")); // get the URL from the ConfigReader
 
-        testCentrePage.userName.sendKeys("techproed");
-        testCentrePage.password.sendKeys("SuperSecretPassword");
+        testCentrePage.userName.sendKeys(ConfigReader.getProperty("testcentre_userName"));
+        testCentrePage.password.sendKeys(ConfigReader.getProperty("testcentre_password"));
         testCentrePage.submitButton.click();
 
         // Verify
         String expected = "Secure Area";
         assertEquals(expected,Driver.getDriver().getTitle());
+
+        // close the driver
+        Driver.closeDriver();
 
     }
 
