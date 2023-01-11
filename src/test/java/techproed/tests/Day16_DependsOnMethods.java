@@ -33,9 +33,10 @@ if independent test fails, dependent test doesn't execute.
     /*
 dependsOnMethods = "searchPage"  -> connecting checkOutPage to searchPage
 searchPage will execute right before checkOutPage
-If searchPage PASS -> execute checkoutPage
+If searchPage PASS -> executes checkoutPage
 If searchPage FAIL -> SKIP checkoutPage
  */
+
 
 
 }
