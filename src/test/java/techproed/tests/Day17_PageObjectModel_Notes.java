@@ -54,9 +54,18 @@ In POM, we create Properties File
 > Static block is used to instantiate Properties file
 > We create a ConfigReader class to read the DATA from files (key=value structure)
 
-
 In POM, Page classes are created to locate and save webElements for once and make the
 reusable to be used in the test classes.
+Page Factory is used to instantiate the Page element and calling the driver
+
+REUSABLE METHODS:
+Same as JUnit.. in functionality
+But the difference is in TestNG reusable methods in  a different class in utility package
+Benefits:
+saves time, clean test classes, avoid repetition, reduces mistakes, focus on test cases rather than creating more codes,
+easy to debug, easy maintenance
+
+PAGES are used to locate and store WEBELEMENTS
 
 
 Benefits of POM:

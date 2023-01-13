@@ -11,10 +11,10 @@ public class TestCentrePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     // Use any of the 8 locators to locate the WebElements
-    @FindBy(id="exampleInputEmail1")
+    @FindBy(id = "exampleInputEmail1")
     public WebElement userName;
 
-    @FindBy(name="password")
+    @FindBy(id="exampleInputPassword1")
     public WebElement password;
 
     @FindBy(xpath="//button[@type='submit']")
