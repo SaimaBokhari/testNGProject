@@ -77,7 +77,7 @@ public class Day19_ReservationTest {
 //          =======================================
 //        And click continue reservation
         homePage.continueReservationButton.click();
-        // CAR IS NOT RESERVED  .. This is called BLOCKER
+        // CAR IS NOT RESERVED..Test left incomplete  .. This is called BLOCKER
 
 
 //        And verify complete reservation screen pops up

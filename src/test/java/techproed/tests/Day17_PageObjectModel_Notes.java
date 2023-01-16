@@ -70,6 +70,39 @@ PAGES are used to locate and store WEBELEMENTS
 
 Benefits of POM:
 > Easy to debug
+> Clean coding
+> Avoids repetition
+
+
+Excel Automation:
+> Apache poi library is used to work with Microsoft Files (put it in your pom.xml)
+> Workbook > Sheet > Row > Cell
+
+Excel Utils
+> Reusable Methods (Recommended)
+> Getting the list of data as List or Map or Array
+> Getting the number of rows, columns, or writing on the Excel file
+> That data will be used in the test classes
+> This type of testing is called DATA DRIVEN TESTING. (Testing the application with multiple external data (coming from Excel)
+> Coz Data generates new test cases
+
+Test Data:
+> Where do you get your testing data?
+  BA(through FRD,BRD) , Test Lead, Tech Lead, Manual Tester, Developers
+> How do you use the data in test cases?
+  I always try to use data dynamically. Some data sources are:
+     > External Files (Excel, Config.properties, Json, Xml etc.)
+     > Database
+     > API
+     > Faker
+
+Remember Config.properties sheet should only store most important data.
+
+DATA PROVIDER:
+
+> It's a functionality of TestNG ONLY.
+
+
  */
 
 }
