@@ -90,12 +90,12 @@ this priority is about the order in which we want to run the tests.
         System.out.println("test4");
     }
 
-    @Test (priority = 1)
+    @Test (groups = "minor-regression-group")
     public void test5(){
         System.out.println("test5");
     }
 
-    @Test
+    @Test (groups = "minor-regression-group")
     public void test6(){
         System.out.println("test6");
     }

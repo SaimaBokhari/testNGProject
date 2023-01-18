@@ -47,8 +47,6 @@ public class Day19_ReservationTest {
         ReusableMethods.verifyElementDisplayed(homePage.userId);
 
 
-
-
 //        NOW THAT U LOGGED IN THE APPLICATION, WE CAN ENTER THE REQUIRED FIELDS
 
 //        And select a car
@@ -79,6 +77,8 @@ public class Day19_ReservationTest {
         homePage.continueReservationButton.click();
         // CAR IS NOT RESERVED..Test left incomplete  .. This is called BLOCKER
 
+        // Close driver
+        Driver.closeDriver();
 
 //        And verify complete reservation screen pops up
 //        And enter card number

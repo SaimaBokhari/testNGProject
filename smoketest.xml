@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Blue Rental Car Project" verbose="1" >
+    <test name="Smoke Test"   >
+        <packages>
+            <package name="techproed.tests.smoketest.logintests" />
+            <package name="techproed.tests.smoketest.reservationtests" />
+        </packages>
+    </test>
+</suite>
+
+<!--SUITE > TEST > PACKAGE > then any of the GROUPS > CLASSES > METHODS > INCLUDE OR EXCLUDE
+name  = any of the above
+verbose = The amount of info. The bigger number the more info
+<package name="techproed.tests.smoketest.logintests" />   - runs all SmokeTest Package
+
+SAVE YOUR XML FILES
+RUN YOUR XML FILE  -> RIGHT CLICK here or on the file
+This XML FILE serves as another way of grouping the tests/classes/packages etc.  that we want to run
+It runs in random order.
+This is our first TestNG xml file.
+-->

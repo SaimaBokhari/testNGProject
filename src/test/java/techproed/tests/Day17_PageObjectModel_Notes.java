@@ -101,6 +101,29 @@ Remember Config.properties sheet should only store most important data.
 DATA PROVIDER:
 
 > It's a functionality of TestNG ONLY.
+> Used to provide data for the Test Cases. (like an external source Excel, however it's in the same class by using @DataProvider annotation before the method)
+> The return type is 2D Array.
+> There are 2 parameters we can pass.
+   (OPTIONAL)
+     > name : used for assigning custom method name
+     > parallel : used for parallel testing
+> DataProvider is used outside the Test annotation
+
+TestNG xml file:
+xml files are used for configuration, or custom setting or to add dependencies etc.
+In TestNG, we use xml files to customise test groups/cases (specific test classes/groups, methods or packages etc.)
+We can even include / exclude methods from the group of tests that we want to run
+ SUITE > TEST > PACKAGE > GROUPS > CLASSES > METHODS > INCLUDE OR EXCLUDE
+
+This kind of files can be used in other frameworks as well, but it won't work the same way as it does in TestNG
+
+> Use Group annotation in test methods and configure xml file
+> Running parallel test cases
+
+TestNG xml file looks similar to html file, but they're actually different
+https://testng.org/doc/documentation-main.html#testng-xml
+XML FILE serves as another way of grouping the tests/classes/packages etc.  that we want to run
+It runs in random order.
 
 
  */

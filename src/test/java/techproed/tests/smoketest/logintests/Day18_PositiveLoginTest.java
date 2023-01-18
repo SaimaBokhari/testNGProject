@@ -40,12 +40,13 @@ Admin password: 12345
     HomePage homePage;  // at class level
     LoginPage loginPage;
     @Test
-    public void US100201_Admin_Login(){
+    public void admin_Login(){
         // Go to https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 
         // Click on login button  (Create the HomePage first and create object)
         homePage= new HomePage(); // instantiate it
+        ReusableMethods.waitFor(2);
         homePage.homePageLoginButton.click();
 
         // We land on the next page logIn page,so we create another Page to locate and store email and password
