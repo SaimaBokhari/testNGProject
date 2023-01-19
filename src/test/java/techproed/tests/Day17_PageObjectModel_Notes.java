@@ -125,6 +125,30 @@ https://testng.org/doc/documentation-main.html#testng-xml
 XML FILE serves as another way of grouping the tests/classes/packages etc.  that we want to run
 It runs in random order.
 
+Parallel testing:
+is done for reducing the execution time, specially when running multiple tests that take long time.
+
+thread-count: number of thread to run in parallel mode.
+
+We can do parallel testing:
+> with xml files
+> with Data provider @DataProvider(parallel = true)
+
+TestNG Listener
+https://testng.org/doc/documentation-main.html#testng-listeners
+We are gonna use ITestListener interface coming from testNG
+> allows you to modify TestNG's behaviour
+
+ITestListener in an interface.
+    It is used for customising our testNG framework.
+    It triggers some extra codes e.g.
+    onStart, onFinish, onTestStart, onTestFinish, onTestSuccess, onTestFail
+    These are special method names to LISTEN the test methods.
+    We specially use Listeners for adding a special condition such as test pass, fail or skip.
+
+TestNG xml Plug ins:
+
+
 
  */
 

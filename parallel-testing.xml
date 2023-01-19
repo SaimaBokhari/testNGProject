@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Blue Rental Car" verbose="1" parallel="classes" thread-count="3">
+    <test name="Parallel Test Classes" >
+        <classes>
+
+            <class name="techproed.tests.paralleltesting.Day22_ManagerLogin" />
+            <class name="techproed.tests.paralleltesting.Day22_SearchItems" />
+            <class name="techproed.tests.paralleltesting.Day22_TechproEducation" />
+
+        </classes>
+    </test>
+</suite>
+
+        <!--SUITE > TEST > PACKAGE > GROUPS > CLASSES > METHODS > INCLUDE OR EXCLUDE
+        name  = any of the above
+        verbose = The amount of info. The bigger number the more info
+        To run on multiple browsers, add following information after verbose:
+        parallel="true" thread-count="3"
+        we can also change it into parallel="classes" to assign each class one browser  classes means run at class level
+
+        If we turn parallel="false", it will run the tests in sequential order.
+
+        SAVE YOUR XML FILES
+        RUN YOUR XML FILE  -> RIGHT CLICK here or on the file
+        This XML FILE serves as another way of grouping the tests/classes/packages etc.  that we want to run
+        -->

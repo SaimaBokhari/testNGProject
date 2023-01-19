@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Blue Rental Car" verbose="1" >
+    <listeners>
+        <listener class-name="techproed.utilities.Listeners"/>
+    </listeners>
+
+    <test name="Login Test Classes" >
+        <classes>
+            <class name="techproed.tests.ListenersTest02" />
+        </classes>
+    </test>
+</suite>
+
+        <!--SUITE > TEST > PACKAGE > GROUPS > CLASSES > METHODS > INCLUDE OR EXCLUDE
+        name  = any of the above
+        verbose = The amount of info. The bigger number the more info
+        <class name="techproed.tests.ListenersTest02" />   - runs the ListenersTest02 as regular test class
+
+        To create the connection, we must add following code right after <suite
+        <listeners>
+        <listener class-name="techproed.utilities.Listeners"/>
+         </listeners>
+
+
+        SAVE YOUR XML FILES
+        RUN YOUR XML FILE  -> RIGHT CLICK here or on the file
+        This XML FILE serves as another way of grouping the tests/classes/packages etc.  that we want to run
+        -->

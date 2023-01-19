@@ -54,4 +54,5 @@ In POM, we create Properties File
 > This file makes the CODE dynamic (e.g we need to change,  just change config url)
 > Keeps Test classes clean
 > Static block is used in ConfigReader class to instantiate Properties file
+
  */

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="techproed.utilities.Listeners"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true"
+          name="/Users/Ahmed/IdeaProjects/testNGProject/src/test/java/techproed/tests/ListenersTest02.java">
+        <classes>
+            <class name="techproed.tests.ListenersTest02">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+        <!--SUITE > TEST > PACKAGE > GROUPS > CLASSES > METHODS > INCLUDE OR EXCLUDE
+                name  = any of the above
+                verbose = The amount of info. The bigger number the more info
+                <class name="techproed.tests.ListenersTest02" />   - runs the ListenersTest02 as regular test class
+
+                To create the connection, we must add following code right after <suite
+                <listeners>
+                <listener class-name="techproed.utilities.Listeners"/>
+                 </listeners>
+
+        NOTE: There's an easy way to create testNG.xml file
+        Right Click on any test class for which you want to create testNG.xml file
+        Click on "Create TestNG XML" at teh bottom of the dropdown
+        testNG.xml will be created, rename it according to your requirements.
+        If you create another testNG.xml without renaming and saving the previous one, it will be replaced.
+
+                SAVE YOUR XML FILES
+                RUN YOUR XML FILE  -> RIGHT CLICK here or on the file
+                This XML FILE serves as another way of grouping the tests/classes/packages etc.  that we want to run
+                -->
