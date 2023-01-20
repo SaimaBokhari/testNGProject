@@ -38,7 +38,7 @@ public class JSUtils {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Driver.getDriver());
         javascriptExecutor.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
         try {
-            Thread.sleep(5000);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -46,7 +46,7 @@ public class JSUtils {
     //Flashing the background color
     public static void flash(WebElement element) {
         String bgColor = element.getCssValue("backgroundcolor");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             changeColor("rgb(0,200,0", element);
             changeColor(bgColor, element);
         }

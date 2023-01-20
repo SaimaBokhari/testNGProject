@@ -101,7 +101,7 @@ Then
     Assert that number of customers is 0
      */
 
-    @Test
+    @Test(groups = "smoke-test")
     public void xyzBankTest(){
 
         //    Go to url https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login
@@ -237,6 +237,9 @@ Then
 
         //    Assert that number of customers is 0
         assertEquals(0, numbOfRowsAfterDelete);
+
+        // close driver
+        Driver.closeDriver();
 
     }
 }
