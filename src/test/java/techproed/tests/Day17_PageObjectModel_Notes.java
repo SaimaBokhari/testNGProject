@@ -139,16 +139,51 @@ https://testng.org/doc/documentation-main.html#testng-listeners
 We are gonna use ITestListener interface coming from testNG
 > allows you to modify TestNG's behaviour
 
-ITestListener in an interface.
-    It is used for customising our testNG framework.
+ITestListener is an interface.
+    It is used for customising our testNG framework. and to create flow
     It triggers some extra codes e.g.
     onStart, onFinish, onTestStart, onTestFinish, onTestSuccess, onTestFail
     These are special method names to LISTEN the test methods.
     We specially use Listeners for adding a special condition such as test pass, fail or skip.
 
+    1. We can use @Listener annotation in the class
+    2. We can run Listeners through xml file
+
 TestNG xml Plug ins:
 
 
+In case test fails, re-run it, do manual test again, check your code and run again.
+Sometimes we can have FALSE FAILURE as well.
+We can retry failed test cases as well by using IRetryAnalyzer interface.
+
+1. Create a Class under utils package: ListenersRetry
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+public class ListenersRetry implements IRetryAnalyzer {
+  private int retryCount = 0;
+  private static final int maxRetryCount = 3;
+  @Override
+  public boolean retry(ITestResult result) {
+    if (retryCount < maxRetryCount) {
+      retryCount++;
+      return true;
+    }
+    return false;
+  }}
+2. In Test class use @Test(retryAnalyzer = techproed.utilities.ListenersRetry.class)
+3. Result : When this test case fails, TestNG will try to run same failed test case again
+
+This will add more value to our framework.
+
+Conclusion:
+
+JUnit: A testing framework. Has less annotation compare to TestNG
+TestNG: An advanced testing framework. Advanced version of JUnit framework
+Page Object Model: Popular Framework Design. We use page  object model for creating reusable page objects and methods.
+Maven: Project built tool. With maven, we can easily add other dependencies(junit,testng,selenium, faker, poi,…) to our project.
+       Instead of importing the jar files, we just add the dependency in the pom.xml file. Then maven automatically
+       imports jar files for us. Developers may also use maven for their project building.
+Selenium: Selenim is used to test web based application. We can also do mobile testing with 3rd party tool such as appium.
 
  */
 

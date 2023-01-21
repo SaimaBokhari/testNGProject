@@ -1,19 +1,21 @@
-package techproed.tests;
+package techproed.tests.listeners;
 
 import org.openqa.selenium.By;
 import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import techproed.utilities.Driver;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.AssertJUnit.*;
+/*
+  Use @Listeners to create a connection between test class and the Listeners class from Utilities package.
 
-public class ListenersTest02 {
+  Use path like (techproed.utilities.Listeners.class) to tell Listeners which path to follow.
 
-    /*
-    > without using @Listeners annotation
-    > use xml file
+ */
+@Listeners(techproed.utilities.Listeners.class)
+public class ListenersTest1 {
 
-     */
     @Test
     public void test1(){
         System.out.println("Test case 1 PASS ");

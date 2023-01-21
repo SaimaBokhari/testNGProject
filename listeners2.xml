@@ -9,7 +9,7 @@
     <test verbose="2" preserve-order="true"
           name="/Users/Ahmed/IdeaProjects/testNGProject/src/test/java/techproed/tests/ListenersTest02.java">
         <classes>
-            <class name="techproed.tests.ListenersTest02">
+            <class name="techproed.tests.listeners.ListenersTest02">
                 <methods>
                     <include name="test1"/>
                     <include name="test2"/>
@@ -24,7 +24,7 @@
         <!--SUITE > TEST > PACKAGE > GROUPS > CLASSES > METHODS > INCLUDE OR EXCLUDE
                 name  = any of the above
                 verbose = The amount of info. The bigger number the more info
-                <class name="techproed.tests.ListenersTest02" />   - runs the ListenersTest02 as regular test class
+                <class name="techproed.tests.listeners.ListenersTest02" />   - runs the ListenersTest02 as regular test class
 
                 To create the connection, we must add following code right after <suite
                 <listeners>
