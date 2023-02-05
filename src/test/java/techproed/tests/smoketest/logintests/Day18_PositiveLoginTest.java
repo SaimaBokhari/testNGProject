@@ -1,5 +1,6 @@
 package techproed.tests.smoketest.logintests;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
 import techproed.pages.LoginPage;
@@ -7,7 +8,6 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
-import static org.testng.AssertJUnit.assertTrue;
 
 public class Day18_PositiveLoginTest {
     /*
@@ -39,8 +39,9 @@ Admin password: 12345
 
     HomePage homePage;  // at class level
     LoginPage loginPage;
-    @Test
+    @Test(groups = "minor-regression-group", retryAnalyzer = techproed.utilities.ListenersRetry.class)
     public void admin_Login(){
+        Reporter.log("Going to the application URL");
         // Go to https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 
@@ -68,6 +69,7 @@ Admin password: 12345
 
         // Close driver
         Driver.closeDriver();
+        Reporter.log("Test is complete!");
 
         /*
          There are 3 main parts for testing: UI, Database and API .. Also called End to End Testing

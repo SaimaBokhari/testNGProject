@@ -28,7 +28,7 @@ Error: User with fake@bluerentalcars.com not found
     LoginPage loginPage;
     Faker faker;
 
-    @Test
+    @Test(groups = "minor-regression-group", retryAnalyzer = techproed.utilities.ListenersRetry.class)
     public void incorrectEmailAndPassword() throws IOException {
         // Go to https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));

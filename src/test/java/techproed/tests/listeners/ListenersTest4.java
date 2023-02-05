@@ -10,7 +10,9 @@ public class ListenersTest4 {
     @Test(retryAnalyzer = techproed.utilities.ListenersRetry.class)
     public void test1(){
         Driver.getDriver().get("https://www.techproeducation.com/");
-
         assertTrue(false);
     }
 }
+
+// We cannot link ListenersRetry class with xml file.
+// We have to use another ListenersRetryAnalyzer
